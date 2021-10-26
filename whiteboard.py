@@ -33,3 +33,18 @@ def mean(num):
 print(mean([1, 1, 5, 5, 10, 8, 7]))
 print(mean([-10, -4, -2, -4, -2, 0]))
 print(mean([1, 2, 3, 4, 100]))
+
+
+def mean1 (nums):
+    mins = min(nums)
+    maxs = max(nums)
+    while mins in nums:
+        nums.remove(mins)
+        while maxs in nums:
+            nums.remove(maxs)
+    avg = sum(nums) // len(nums)
+    return avg
+
+print(mean1([1, 1, 5, 5, 10, 8, 7]))
+print(mean1([-10, -4, -2, -4, -2, 0]))
+print(mean1([1, 2, 3, 4, 100]))
